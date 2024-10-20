@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {
   Disclosure,
   DisclosureButton,
@@ -10,10 +11,11 @@ import {
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Contato', href: '#', current: true },
+  { name: 'Criar', href: '/pages/create', current: false },
+  { name: 'Visualizar', href: '#', current: false },
+  { name: 'Editar', href: '#', current: false },
+  { name: 'Excluir', href: '#', current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -26,7 +28,6 @@ export default function Header() {
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
         <div className='relative flex h-16 items-center justify-between'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
-            {/* Mobile menu button*/}
             <DisclosureButton className='group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
               <span className='absolute -inset-0.5' />
               <span className='sr-only'>Open main menu</span>
@@ -42,11 +43,13 @@ export default function Header() {
           </div>
           <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
             <div className='flex flex-shrink-0 items-center'>
-              <img
-                alt='Your Company'
-                src='https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500'
-                className='h-8 w-auto'
-              />
+              <a href='/'>
+                <img
+                  alt='Your Company'
+                  src='https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500'
+                  className='h-8 w-auto'
+                />
+              </a>
             </div>
             <div className='hidden sm:ml-6 sm:block'>
               <div className='flex space-x-4'>
