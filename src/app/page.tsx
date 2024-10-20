@@ -1,7 +1,13 @@
+import Footer from './components/footer/footer';
+import Header from './components/header/header';
+import ContentPage from './pages/content/page';
+
 export default function Home() {
   return (
     <div>
-      <p>Teste 2</p>
+      <Header />
+      <ContentPage />
+      <Footer />
     </div>
   );
 }
